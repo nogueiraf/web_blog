@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container page-form">
+    <form id="login-form" action="/auth/folder" method="post">
+
+        <div class="radio">
+            <label>
+                <input type="radio" name="mode" id="mode1" value="canais" checked>
+                Pastas para Canais
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="mode" id="mode2" value="venda">
+                Pastas para Venda Direta
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="start">Início: CFR_</label>
+            <input type="text" id="start" class="form-control" name="start">
+        </div>
+        <div class="form-group">
+            <label for="end">Fim: CFR_</label>
+            <input type="text" id="end" class="form-control" name="end">
+            <p>No caso de canais, repita o mesmo valor de Início</p>
+        </div>
+
+        <button type="submit" class="btn btn-success">Criar Pastas</button>
+    </form>
+</div>
+{% endblock %}
