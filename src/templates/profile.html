@@ -1,4 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1>Hello {{ email }}</h1>
+<div class="container page-form">
+    <h2> Bem vindo {{email}}</h2>
+    <a href="/ftp"><button type="submit" class="btn btn-success">Criar Pastas</button></a>
 {% endblock %}
